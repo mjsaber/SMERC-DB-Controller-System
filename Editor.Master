@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Editor.master.cs" Inherits="RTMC.Editor" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/grid.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/round.css" rel="stylesheet" type="text/css"/> 
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    SMERC Monitoring and Control Center
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+<%--                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>--%>
+                    <LoggedInTemplate>
+                        You are <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Logout" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="ChartAndReport.aspx" Text="Chart and Report" />
+                        <asp:MenuItem NavigateUrl="~/ChargingRecord.aspx" Text="Charging Records" />
+                        <asp:MenuItem NavigateUrl="ScheduledCharging.aspx" Text="Scheduled Charging" />
+                        <asp:MenuItem NavigateUrl="~/StationInMap.aspx" Text="Map of Station in Grid" />
+                        <asp:MenuItem NavigateUrl="~/HMC.aspx" Text="Monitoring and Control" />
+                        <asp:MenuItem NavigateUrl="DemandResponse.aspx" Text="Demand Response" />
+                        <asp:MenuItem NavigateUrl="EmailForm.aspx" Text="Email System" />
+                        <asp:MenuItem NavigateUrl="Editor/EmailValidation.aspx" Text="New User Authorization" />
+                        <asp:MenuItem NavigateUrl="~/Editor/EVUserEditorHashed.aspx" Text="User Editor" />
+                        <asp:MenuItem NavigateUrl="~/Editor/EditGateway.aspx" Text="Charging Box Editor" />
+                        <asp:MenuItem NavigateUrl="~/Editor/EditStation.aspx" Text="Charging Station Editor" />
+                        <asp:MenuItem NavigateUrl="Editor/EditOrganization.aspx" Text="Edit Organization" />
+                        <asp:MenuItem NavigateUrl="Editor/EditCityCombine.aspx" Text="Combinated City" />
+                        <asp:MenuItem NavigateUrl="Editor/EditParkingLot.aspx" Text="Edit Parking Lot" />
+                        <asp:MenuItem NavigateUrl="Editor/EditKiosk.aspx" Text="Edit Kiosk" />
+                        <asp:MenuItem NavigateUrl="Editor/EditFleet.aspx" Text="Edit Fleet" />
+                        <asp:MenuItem NavigateUrl="Editor/EditEVModel.aspx" Text="Edit EV Model" />
+                        <asp:MenuItem NavigateUrl="Editor/KeyGen.aspx" Text="Key Generator" />
+
+                        <asp:MenuItem NavigateUrl="~/Account/ChangePassword.aspx" 
+                            Text="Change Password" Value="Change Password"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">                                
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+<asp:Image ID="Image1" runat="server" ImageUrl="~/Images/SMALL smerc.png" Width="150px" />
+<br />
+© 2011-2013, SMERC UCLA
+        </div>
+    </div>
+<%--    <div class="footer">
+            <h6>© 2011-2012, SMERC UCLA</h6>        
+    </div>--%>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+9wIL+gcjRi
+
+Select temp1.UserId, temp1.UserName as username, temp2.fixer, temp2.username as fixername
+From (Select f.id as id1, f.userid, username
+		From Feedback f INNER JOIN aspnet_Users u
+		on f.userid = u.UserId) as temp1
+		INNER JOIN 
+		(Select id as id2, fixer, username 
+		From Feedback, aspnet_Users
+		Where Feedback.fixer = aspnet_Users.UserId) as temp2
+		on temp1.id1 = temp2.id2
+		INNER JOIN 
+		(Select UserId, RoleCityID, City 
+		From aspnet_profile p 
+		Where RoleCityID = orgId) as temp3 on temp3.UserId = temp1.userid

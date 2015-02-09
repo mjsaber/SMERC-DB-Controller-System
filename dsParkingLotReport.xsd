@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsParkingLotReport" targetNamespace="http://tempuri.org/dsParkingLotReport.xsd" xmlns:mstns="http://tempuri.org/dsParkingLotReport.xsd" xmlns="http://tempuri.org/dsParkingLotReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsParkingLotReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsParkingLotReport" msprop:Generator_UserDSName="dsParkingLotReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtChargingRecord" msprop:Generator_TableClassName="dtChargingRecordDataTable" msprop:Generator_TableVarName="tabledtChargingRecord" msprop:Generator_RowChangedName="dtChargingRecordRowChanged" msprop:Generator_TablePropName="dtChargingRecord" msprop:Generator_RowDeletingName="dtChargingRecordRowDeleting" msprop:Generator_RowChangingName="dtChargingRecordRowChanging" msprop:Generator_RowEvHandlerName="dtChargingRecordRowChangeEventHandler" msprop:Generator_RowDeletedName="dtChargingRecordRowDeleted" msprop:Generator_RowClassName="dtChargingRecordRow" msprop:Generator_UserTableName="dtChargingRecord" msprop:Generator_RowEvArgName="dtChargingRecordRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SpaceNo" msprop:Generator_ColumnVarNameInTable="columnSpaceNo" msprop:Generator_ColumnPropNameInRow="SpaceNo" msprop:Generator_ColumnPropNameInTable="SpaceNoColumn" msprop:Generator_UserColumnName="SpaceNo" type="xs:string" minOccurs="0" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" type="xs:string" minOccurs="0" />
+              <xs:element name="StartTime" msprop:Generator_ColumnVarNameInTable="columnStartTime" msprop:Generator_ColumnPropNameInRow="StartTime" msprop:Generator_ColumnPropNameInTable="StartTimeColumn" msprop:Generator_UserColumnName="StartTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndTime" msprop:Generator_ColumnVarNameInTable="columnEndTime" msprop:Generator_ColumnPropNameInRow="EndTime" msprop:Generator_ColumnPropNameInTable="EndTimeColumn" msprop:Generator_UserColumnName="EndTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsEnd" msprop:Generator_ColumnVarNameInTable="columnIsEnd" msprop:Generator_ColumnPropNameInRow="IsEnd" msprop:Generator_ColumnPropNameInTable="IsEndColumn" msprop:Generator_UserColumnName="IsEnd" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsEndedByUser" msprop:Generator_ColumnVarNameInTable="columnIsEndedByUser" msprop:Generator_ColumnPropNameInRow="IsEndedByUser" msprop:Generator_ColumnPropNameInTable="IsEndedByUserColumn" msprop:Generator_UserColumnName="IsEndedByUser" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ChargingTimes" msprop:Generator_ColumnVarNameInTable="columnChargingTimes" msprop:Generator_ColumnPropNameInRow="ChargingTimes" msprop:Generator_ColumnPropNameInTable="ChargingTimesColumn" msprop:Generator_UserColumnName="ChargingTimes" type="xs:int" minOccurs="0" />
+              <xs:element name="EnergyPrice" msprop:Generator_ColumnVarNameInTable="columnEnergyPrice" msprop:Generator_ColumnPropNameInRow="EnergyPrice" msprop:Generator_ColumnPropNameInTable="EnergyPriceColumn" msprop:Generator_UserColumnName="EnergyPrice" type="xs:double" minOccurs="0" />
+              <xs:element name="EnergyConsumed" msprop:Generator_ColumnVarNameInTable="columnEnergyConsumed" msprop:Generator_ColumnPropNameInRow="EnergyConsumed" msprop:Generator_ColumnPropNameInTable="EnergyConsumedColumn" msprop:Generator_UserColumnName="EnergyConsumed" type="xs:double" minOccurs="0" />
+              <xs:element name="ChargingCost" msprop:Generator_ColumnVarNameInTable="columnChargingCost" msprop:Generator_ColumnPropNameInRow="ChargingCost" msprop:Generator_ColumnPropNameInTable="ChargingCostColumn" msprop:Generator_UserColumnName="ChargingCost" type="xs:double" minOccurs="0" />
+              <xs:element name="NSpaceNo" msprop:Generator_ColumnVarNameInTable="columnNSpaceNo" msprop:Generator_ColumnPropNameInRow="NSpaceNo" msprop:Generator_ColumnPropNameInTable="NSpaceNoColumn" msprop:Generator_UserColumnName="NSpaceNo" type="xs:int" minOccurs="0" />
+              <xs:element name="GatewayName" msprop:Generator_ColumnVarNameInTable="columnGatewayName" msprop:Generator_ColumnPropNameInRow="GatewayName" msprop:Generator_ColumnPropNameInTable="GatewayNameColumn" msprop:Generator_UserColumnName="GatewayName" type="xs:string" minOccurs="0" />
+              <xs:element name="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnPropNameInTable="RankColumn" msprop:Generator_UserColumnName="Rank" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
